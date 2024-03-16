@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./components/header/header.component";
 import { TasksComponent } from "./components/tasks/tasks.component";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
     // the selector is the html tag of your component that will be renderd in another component
@@ -10,7 +11,7 @@ import { TasksComponent } from "./components/tasks/tasks.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, HeaderComponent, TasksComponent]
+    imports: [CommonModule, RouterOutlet, FontAwesomeModule, HeaderComponent, TasksComponent]
 })
 export class AppComponent {
   // declare component functionalities here i.e lifecycle methods
