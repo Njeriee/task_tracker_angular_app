@@ -20,7 +20,7 @@ export class TasksComponent {
 
   // the service will run once the component is initiated
   ngOnInit(): void {
-     this.tasks = this.taskService.getTasks();
+     this.taskService.getTasks().subscribe((tasks)=>this.tasks = tasks);
   }
 
 }
