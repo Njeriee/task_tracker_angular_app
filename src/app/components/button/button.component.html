@@ -1,1 +1,3 @@
-<button class="btn">Click me</button>
+<!-- adding a style directive [ngStyle] -->
+<!-- adding event listener here the event listener is (click) and the method it emits is onClick which is then defined in the module ts file as an event emmiter  -->
+<button [ngStyle]="{'background-color':color}" class="btn" (click)="onClick()">{{text}}</button>
