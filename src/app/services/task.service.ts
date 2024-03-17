@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+// API calls
+import { HttpClient } from '@angular/common/http';
 // implementing observables
 // the observable function is found in the rxjs file
 import { Observable,of } from 'rxjs';
@@ -12,11 +14,11 @@ import { Task } from '../Tasks';
 })
 export class TaskService {
 
-  constructor() { }
+  private apiUrl = 'http://localhost:5000/tasks'
+  constructor(private http:HttpClient) { }
 
   // observables are used for asynchronous functions
   getTasks(): Observable<Task[]>{
-    const tasks = of(TASKS)
-    return tasks
+        return this.http.get<Task[]>(this.apiUrl)
   }
 }
