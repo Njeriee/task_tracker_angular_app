@@ -1,4 +1,5 @@
-<app-add-task></app-add-task>
+<!-- the dollar sign refers to passing a task item from the child component -->
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
 <!-- here we pass the task item component with the [task] prop -->
 <app-task-item 
 *ngFor = "let task of tasks" 
